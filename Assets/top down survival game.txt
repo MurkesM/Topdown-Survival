@@ -1,0 +1,49 @@
+Camera movement:
+(done)Top down at a slight angle. Similar to diablo.
+(done)Needs to follow the users character as they move.
+(done)No delay in follow. Should be exactly on character as they move.
+(done)No rotations or anything needed.
+
+World:
+(done)Floor. Just use a basic flat plane.
+(done)Make sure there is a border that the user can't pass.
+
+Character:
+(done)Start with a capsule.
+It needs to be able to move up/down/right/left in relation to the world, not the player. Left it at moving in relation to the player on accident.
+(done)Movement should be using arrow keys.
+Character rotation needs to match direction of movement.
+
+Abilities:
+Simple left click to fire a projectile in the direction of the click.
+Holding down left mouse will also continue firing projectiles.
+Need to set an attack speed so the projectiles spawn at reasonable rates.
+Make sure projectile is destroyed when, colliding when an enemy or terrain, and/or after a certain range from intial shot. 
+Make sure to object pool projectiles. Make sure this pool created more projectiles if non are available as needed.
+Make sure projectiles are launched from the players postion. Can be the center of the capsule for now.
+Projectiles can damage enemies.
+Projectiles can just be a capsule as well.
+Power ups drop randomly from enemies.
+The user can pick up a power up that makes them faster for a period of time.
+The user can pick up a power that gives them a higher attack speed for a perioid of time.
+
+Enemies:
+Can be capsules.
+Constantly find the shortest path to the user and move towards them.
+Rotation needs to match direction of movement.
+To keep it simple, with no animations, etc, we can make it where if an enemy colliders with the player they will do damage to the player and after
+a timer goes off, lets say 2 seconds or something, than they will do damage again if still in contact with the player or whenever comming into contact
+with the player again.
+Can make 3 enemy varients for now. A normal speed one that takes 2 hits. A slow one that takes 3 hits and a fast one that takes 1 hit.
+Need to spawn randomly from a set of spawn points. Should not be allowed to spawn at spawn points that are too close to the player.
+Enemies need object pooled as well.
+
+Game Loop:
+User selects difficulties between 1 and 100.
+Spawn positioned at center of the floor. 
+no enemies for 3 seconds. Show a count down.
+Enemies spawn rapidly based on the difficulty selected by the user.
+Higher difficulty means more enemies.
+Round lasts up to 1 min. 
+If the user is still alive, they win. 
+If not they lose.
